@@ -1476,9 +1476,23 @@ body {
     font-family: var(--font-sans);
 }
 
+select.cyber-input {
+    width: 100%;
+    max-width: 100%;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    padding-right: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
 select.cyber-input option {
     background: #0e1526;
     color: #ffffff;
+    font-family: var(--font-sans);
+    font-size: 15px;
 }
 
 .cyber-textarea {
