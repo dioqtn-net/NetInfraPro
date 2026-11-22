@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description"
+        content="NetInfraPro Consulting - Mitra strategis untuk stabilitas infrastruktur IT dan konektivitas bisnis Anda. Enterprise Routing, WLAN, NOC Managed Services, & IT Support.">
+    <title>NetInfraPro | IT Infrastructure & Network Consulting</title>
+
+    <!-- Google Fonts: Space Grotesk & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sticky Glassmorphism Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand" aria-label="NetInfraPro Consulting">
+                <span class="brand-code">&lt;NIP/&gt;</span>
+                <span class="brand-name">Net<span class="accent-cyan">Infra</span>Pro</span>
+                <span class="brand-badge">
+                    <span class="status-pulse"></span>
+                    <span class="badge-text">ONLINE</span>
+                </span>
+            </a>
+
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Navigasi Utama">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-action">
+                    <a href="#contact" class="btn btn-sm btn-outline cyber-hover">
+                        <span class="btn-prefix">&gt;</span> Konsultasi
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Network Mesh Canvas & Terminal Typing -->
+        <section class="hero-section" id="home">
+            <!-- Interactive Network Topology Canvas -->
+            <canvas id="topology-canvas" aria-hidden="true"></canvas>
+
+            <div class="hero-container">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-label">ENTERPRISE IT CONSULTING &amp; MANAGED SERVICES</span>
+                </div>
+
+                <!-- Terminal Typing Window -->
+                <div class="terminal-shell">
+                    <div class="terminal-bar">
+                        <div class="terminal-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="terminal-label">admin@netinfrapro-core: ~</div>
+                        <div class="terminal-tag">ROUTEROS v7</div>
+                    </div>
+                    <div class="terminal-screen" aria-live="polite">
+                        <h1 class="terminal-command-line">
+                            <span class="terminal-text" id="terminal-typing"></span>
+                            <span class="terminal-cursor">_</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <p class="hero-subtitle">
+                    Mitra strategis untuk stabilitas infrastruktur IT dan konektivitas bisnis Anda.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary cyber-hover">
+                        <span>Free Consultation</span>
+                        <span class="btn-arrow">&rarr;</span>
+                    </a>
+                    <a href="#services" class="btn btn-secondary cyber-hover">
+                        <span>Explore Services</span>
+                    </a>
+                </div>
+
+                <!-- Key Telemetry / Hero Modern Stats (3 Mini-Cards) -->
+                <div class="hero-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon-box">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">INFRASTRUCTURE</span>
+                            <span class="stat-value">Multi-Vendor Ready</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon-box">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">SUPPORT MODEL</span>
+                            <span class="stat-value">On-Site &amp; Remote</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon-box">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">CORE SOLUTIONS</span>
+                            <span class="stat-value">Routing &bull; Wi-Fi &bull; IT Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us & Why Choose Us Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="about-hero-box cyber-hover">
+                    <div class="about-header-tag">[ ABOUT NETINFRAPRO ]</div>
+                    <h2 class="about-headline">
+                        Mitra Konsultan IT Tepercaya Berbasis Keahlian Praktisi Industri
+                    </h2>
+                    <p class="about-lead">
+                        <strong>NetInfraPro</strong> adalah agensi konsultan IT dan managed services terkemuka yang
+                        didukung oleh tenaga ahli tersertifikasi dengan pengalaman bertahun-tahun di industri
+                        telekomunikasi, hospitality kelas dunia, dan korporat multinasional. Kami hadir untuk
+                        mentransformasi infrastruktur teknologi Anda menjadi fondasi bisnis yang kokoh, berkinerja
+                        tinggi, dan aman dari ancaman downtime.
+                    </p>
+                </div>
+
+                <div class="section-header" style="margin-top: 3.5rem;">
+                    <span class="section-tag">[ 01 / WHY CHOOSE US ]</span>
+                    <h2 class="section-title">Nilai Strategis untuk Infrastruktur Anda</h2>
+                    <p class="section-desc">
+                        Kombinasi standar rekayasa jaringan, pemeliharaan proaktif, dan komitmen SLA yang responsif.
+                    </p>
+                </div>
+
+                <div class="why-grid">
+                    <article class="why-card cyber-hover">
+                        <div class="why-card-header">
+                            <div class="why-icon-box">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                    <path d="M2 17l10 5 10-5"></path>
+                                    <path d="M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <span class="why-step">ADV-01</span>
+                        </div>
+                        <h3 class="why-title">Multi-Vendor Expertise</h3>
+                        <p class="why-text">
+                            Berpengalaman mengintegrasikan berbagai perangkat jaringan kelas bisnis seperti MikroTik, Cisco, Aruba, Ruijie, dan ZTE. Solusi kami fleksibel menyesuaikan infrastruktur yang sudah Anda miliki tanpa bergantung pada satu merek.
+                        </p>
+                    </article>
+
+                    <article class="why-card cyber-hover">
+                        <div class="why-card-header">
+                            <div class="why-icon-box">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                    <path d="M2 12h2"></path>
+                                    <path d="M20 12h2"></path>
+                                </svg>
+                            </div>
+                            <span class="why-step">ADV-02</span>
+                        </div>
+                        <h3 class="why-title">Proactive Maintenance</h3>
+                        <p class="why-text">
+                            Kami melakukan pemeliharaan berkala dan pengecekan performa jaringan&mdash;mulai dari stabilitas bandwidth, performa perangkat, hingga keamanan traffic&mdash;untuk mencegah gangguan sebelum menghambat operasional bisnis Anda.
+                        </p>
+                    </article>
+
+                    <article class="why-card cyber-hover">
+                        <div class="why-card-header">
+                            <div class="why-icon-box">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <span class="why-step">ADV-03</span>
+                        </div>
+                        <h3 class="why-title">Coverage Area &amp; SLA</h3>
+                        <p class="why-text">
+                            Dukungan teknisi On-Site cepat untuk wilayah Jakarta Raya &amp; Tangerang Selatan, serta layanan Remote Support untuk seluruh Indonesia dengan komitmen penanganan yang jelas dan terukur.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Services Section (CSS Grid - 3 Cards) -->
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">[ 02 / SERVICES ]</span>
+                    <h2 class="section-title">Our Managed &amp; Consulting Services</h2>
+                    <p class="section-desc">
+                        Solusi komprehensif yang dirancang berdasarkan rekam jejak praktis tim konsultan dalam mengelola
+                        jaringan berkapasitas tinggi dan sistem mission-critical.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <article class="service-card cyber-hover">
+                        <div class="card-top">
+                            <span class="card-id">SRV-01</span>
+                            <span class="card-status-dot"></span>
+                        </div>
+                        <div class="card-icon">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">Enterprise Routing &amp; Security</h3>
+                        <p class="card-text">
+                            Perancangan routing kelas bisnis dengan BGP IP Transit, interkoneksi antar cabang via VPN terenkripsi (IPSec/WireGuard), dynamic routing OSPF, serta pengamanan firewall berlapis.
+                        </p>
+                        <div class="card-tags">
+                            <span>BGP IP Transit</span>
+                            <span>VPN Tunneling</span>
+                            <span>OSPF Routing</span>
+                            <span>Firewall Hardening</span>
+                        </div>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="service-card cyber-hover">
+                        <div class="card-top">
+                            <span class="card-id">SRV-02</span>
+                            <span class="card-status-dot"></span>
+                        </div>
+                        <div class="card-icon">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">WLAN Deployment &amp; Managed Wi-Fi</h3>
+                        <p class="card-text">
+                            Perancangan dan instalasi jaringan Wi-Fi multi-vendor berkapasitas tinggi dengan jangkauan merata, pengamanan akses internal maupun tamu, serta optimasi performa berkala.
+                        </p>
+                        <div class="card-tags">
+                            <span>Multi-Vendor Wi-Fi</span>
+                            <span>Seamless Roaming</span>
+                            <span>VLAN Segmentation</span>
+                            <span>RF Optimization</span>
+                        </div>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="service-card cyber-hover">
+                        <div class="card-top">
+                            <span class="card-id">SRV-03</span>
+                            <span class="card-status-dot"></span>
+                        </div>
+                        <div class="card-icon">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3 class="card-title">IT Helpdesk &amp; Hardware Support</h3>
+                        <p class="card-text">
+                            Perawatan rutin PC &amp; laptop kantor, penanganan cepat kendala jaringan lokal, instalasi serta standardisasi sistem kerja, hingga pendataan aset IT yang rapi dan terukur.
+                        </p>
+                        <div class="card-tags">
+                            <span>PC &amp; Laptop Maintenance</span>
+                            <span>LAN Troubleshooting</span>
+                            <span>IT Asset Management</span>
+                            <span>OS &amp; Endpoint Setup</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (CSS Grid - 3 Card) -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">[ 03 / PORTFOLIO ]</span>
+                    <h2 class="section-title">Featured Infrastructure Projects</h2>
+                    <p class="section-desc">
+                        Bukti nyata penerapan solusi jaringan dan dukungan IT pada sektor perhotelan premium,
+                        telekomunikasi &amp; korporat, hingga perusahaan industri.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card cyber-hover">
+                        <div class="project-card-header">
+                            <div class="project-category">HOSPITALITY</div>
+                            <span class="project-status">COMPLETED</span>
+                        </div>
+                        <h3 class="project-title">Hospitality Fiber &amp; Wi-Fi Deployment</h3>
+                        <div class="project-meta">
+                            <span class="meta-label">Klien:</span>
+                            <span class="meta-val">Ascott Menteng &amp; The Stature</span>
+                        </div>
+                        <p class="project-text">
+                            Penyediaan arsitektur jaringan berbasis ZTE ONT untuk distribusi konektivitas serat optik
+                            berkecepatan tinggi, integrasi Access Point Aruba dan Ruijie untuk cakupan sinyal prima
+                            tanpa dead zone, serta segmentasi VLAN antara akses tamu dan operasional manajemen.
+                        </p>
+                        <div class="project-tags">
+                            <span>ZTE ONT</span>
+                            <span>AP Aruba / Ruijie</span>
+                            <span>VLAN Segmentation</span>
+                            <span>High-Density Wi-Fi</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card cyber-hover">
+                        <div class="project-card-header">
+                            <div class="project-category">TELECOM &amp; CORPORATE</div>
+                            <span class="project-status">COMPLETED</span>
+                        </div>
+                        <h3 class="project-title">Corporate Network Deployment &amp; Support</h3>
+                        <div class="project-meta">
+                            <span class="meta-label">Klien:</span>
+                            <span class="meta-val">PT SANATEL</span>
+                        </div>
+                        <p class="project-text">
+                            Penanganan instalasi dan konfigurasi router serta switch untuk pelanggan korporat, pemantauan performa jaringan menggunakan MRTG dan Zabbix, serta troubleshooting konektivitas dan dukungan maintenance operasional jaringan agar koneksi tetap stabil.
+                        </p>
+                        <div class="project-tags">
+                            <span>Router &amp; Switching</span>
+                            <span>MRTG &amp; Zabbix</span>
+                            <span>Troubleshooting</span>
+                            <span>Net Maintenance</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card cyber-hover">
+                        <div class="project-card-header">
+                            <div class="project-category">IT HELPDESK &amp; SUPPORT</div>
+                            <span class="project-status">COMPLETED</span>
+                        </div>
+                        <h3 class="project-title">Workstation &amp; Network Support</h3>
+                        <div class="project-meta">
+                            <span class="meta-label">Klien:</span>
+                            <span class="meta-val">PT Kapuas Prima Coal Tbk</span>
+                        </div>
+                        <p class="project-text">
+                            Pelaksanaan perawatan rutin perangkat PC kerja, instalasi ulang sistem operasi Windows, serta pemasangan dan standardisasi program kerja operasional. Dilengkapi pengecekan serta pemulihan koneksi jaringan lokal guna menjaga kestabilan aktivitas harian karyawan.
+                        </p>
+                        <div class="project-tags">
+                            <span>PC Maintenance</span>
+                            <span>Windows OS Setup</span>
+                            <span>Standard Software</span>
+                            <span>Network Check</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Experts Section (CSS Grid - 3 Card) -->
+        <section class="section consultants-section" id="team">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">[ 04 / LEADERSHIP &amp; EXPERTS ]</span>
+                    <h2 class="section-title">Our Principal Consultants</h2>
+                    <p class="section-desc">
+                        Profil ringkas para konsultan utama yang memimpin setiap perancangan arsitektur, pengawasan
+                        operasional, dan keandalan sistem NetInfraPro.
+                    </p>
+                </div>
+
+                <div class="consultants-grid">
+                    <!-- Consultant 1: Afrizal Eko Purwanto -->
+                    <article class="consultant-card cyber-hover">
+                        <div class="consultant-slot">
+                            <span>LEAD ARCHITECT // CORE NET</span>
+                            <span class="slot-led"></span>
+                        </div>
+
+                        <div class="consultant-photo-wrapper">
+                            <div class="corner-bracket br-tl"></div>
+                            <div class="corner-bracket br-tr"></div>
+                            <div class="corner-bracket br-bl"></div>
+                            <div class="corner-bracket br-br"></div>
+                            <img src="assets/img/afrizal.png" alt="Afrizal" class="consultant-img" width="400"
+                                height="310" loading="lazy">
+                            <div class="consultant-badge">MTCINE &bull; MTCRE</div>
+                        </div>
+
+                        <div class="consultant-body">
+                            <h3 class="consultant-name">Afrizal Eko Purwanto</h3>
+                            <div class="consultant-role">Lead Network Architect</div>
+
+                            <p class="consultant-exec-desc">
+                                Praktisi senior arsitektur jaringan skala carrier-grade dan telekomunikasi enterprise.
+                                Memegang sertifikasi tertinggi tingkat internasional (MTCINE dan MTCRE), beliau memimpin
+                                perancangan backbone routing BGP redundant, rekayasa protokol OSPF/MPLS berkecepatan
+                                tinggi, serta penguatan postur firewall pada infrastruktur jaringan kritis klien.
+                            </p>
+
+                            <div class="consultant-meta-row">
+                                <div class="meta-item">
+                                    <span class="meta-label">SPESIALISASI UTAMA:</span>
+                                    <span class="meta-text">Core Routing, BGP Multi-Homing, Network Security</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">LISENSI RESMI:</span>
+                                    <div class="cert-badges">
+                                        <span class="cert-pill">MTCINE</span>
+                                        <span class="cert-pill">MTCRE</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Consultant 2: Dio Julianto -->
+                    <article class="consultant-card cyber-hover">
+                        <div class="consultant-slot">
+                            <span>CONSULTANT // INFRA &amp; EOS</span>
+                            <span class="slot-led"></span>
+                        </div>
+
+                        <div class="consultant-photo-wrapper">
+                            <div class="corner-bracket br-tl"></div>
+                            <div class="corner-bracket br-tr"></div>
+                            <div class="corner-bracket br-bl"></div>
+                            <div class="corner-bracket br-br"></div>
+                            <img src="assets/img/dio.jpg" alt="Dio" class="consultant-img" width="400" height="310"
+                                loading="lazy">
+                            <div class="consultant-badge">INFRA &amp; WIRELESS</div>
+                        </div>
+
+                        <div class="consultant-body">
+                            <h3 class="consultant-name">Dio Julianto</h3>
+                            <div class="consultant-role">Infrastructure &amp; EOS Consultant</div>
+
+                            <p class="consultant-exec-desc">
+                                Spesialis infrastruktur jaringan dan Engineer On Site (EOS) berpengalaman dalam operasional jaringan di sektor perhotelan dan apartemen. Menangani instalasi, konfigurasi, hingga troubleshooting perangkat multi-vendor (router, switch, Access Point, dan ONT), segmentasi VLAN dan captive portal, serta preventive maintenance berkala demi kestabilan koneksi operasional.
+                            </p>
+
+                            <div class="consultant-meta-row">
+                                <div class="meta-item">
+                                    <span class="meta-label">SPESIALISASI UTAMA:</span>
+                                    <span class="meta-text">Multi-Vendor Switching, WLAN Deployment, On-Site Support (EOS)</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">KOMPETENSI:</span>
+                                    <div class="cert-badges">
+                                        <span class="cert-pill">MTCNA</span>
+                                        <span class="cert-pill">On-Site Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Consultant 3: Ahmad Sarifudin Faiq -->
+                    <article class="consultant-card cyber-hover">
+                        <div class="consultant-slot">
+                            <span>SPECIALIST // IT SUPPORT</span>
+                            <span class="slot-led"></span>
+                        </div>
+
+                        <div class="consultant-photo-wrapper">
+                            <div class="corner-bracket br-tl"></div>
+                            <div class="corner-bracket br-tr"></div>
+                            <div class="corner-bracket br-bl"></div>
+                            <div class="corner-bracket br-br"></div>
+                            <img src="assets/img/ahmad.jpeg" alt="Ahmad" class="consultant-img" width="400" height="310"
+                                loading="lazy">
+                            <div class="consultant-badge">SYSTEMS &amp; HARDWARE</div>
+                        </div>
+
+                        <div class="consultant-body">
+                            <h3 class="consultant-name">Ahmad Sarifudin Faiq</h3>
+                            <div class="consultant-role">IT Support Specialist</div>
+
+                            <p class="consultant-exec-desc">
+                                Profesional operasional teknologi dengan kepiawaian dalam penanganan hardware kritis,
+                                integritas sistem operasi, dan standardisasi endpoint korporat. Memiliki rekam jejak
+                                pengawasan operasional teknis di industri ekstraktif skala besar, memastikan kelancaran
+                                workstation harian serta kesiapan penanganan insiden tepat waktu.
+                            </p>
+
+                            <div class="consultant-meta-row">
+                                <div class="meta-item">
+                                    <span class="meta-label">SPESIALISASI UTAMA:</span>
+                                    <span class="meta-text">Hardware Troubleshooting, OS Configuration, Endpoint
+                                        Support</span>
+                                </div>
+                                <div class="meta-item">
+                                    <span class="meta-label">FOKUS TEKNIS:</span>
+                                    <div class="cert-badges">
+                                        <span class="cert-pill">PC Maintenance</span>
+                                        <span class="cert-pill">LAN Troubleshooting</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (Accordion) -->
+        <section class="section faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">[ 05 / KNOWLEDGE BASE ]</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-desc">
+                        Jawaban terperinci mengenai fleksibilitas pemeliharaan jaringan eksisting, pengadaan perangkat
+                        resmi, serta ketentuan kerja sama managed service.
+                    </p>
+                </div>
+
+                <div class="faq-accordion" id="faq-accordion">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item cyber-hover">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-1"
+                             id="faq-btn-1">
+                            <span class="faq-question-text">
+                                <span class="faq-number">01.</span> Apakah bisa menangani maintenance jaringan yang sudah ada?
+                            </span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1">
+                            <div class="faq-answer-inner">
+                                <p>
+                                    <strong>Ya, tentu saja.</strong> Kami dapat melakukan pengecekan menyeluruh pada infrastruktur jaringan yang sudah berjalan di kantor Anda. Tim kami akan memetakan sumber gangguan, merapikan konfigurasi routing dan switching, meningkatkan keamanan, serta mengoptimalkan perangkat yang ada tanpa harus mengganti semuanya selama masih layak pakai.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item cyber-hover">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-2"
+                            id="faq-btn-2">
+                            <span class="faq-question-text">
+                                <span class="faq-number">02.</span> Apakah menyediakan pengadaan hardware?
+                            </span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2">
+                            <div class="faq-answer-inner">
+                                <p>
+                                    <strong>Ya, kami melayani pengadaan perangkat sekaligus pemasangannya.</strong> Kami menyediakan perangkat jaringan dan IT original bergaransi resmi&mdash;mulai dari router, managed switch, Access Point, firewall, hingga PC operasional&mdash;dari berbagai merek tepercaya. Seluruh perangkat akan melalui tahap pengecekan, instalasi, hingga konfigurasi langsung siap pakai di lokasi Anda.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item cyber-hover">
+                        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-ans-3"
+                            id="faq-btn-3">
+                            <span class="faq-question-text">
+                                <span class="faq-number">03.</span> Bagaimana sistem kontrak managed service?
+                            </span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
+                            <div class="faq-answer-inner">
+                                <p>
+                                    Kami menyediakan 3 skema kerja sama fleksibel yang bisa disesuaikan dengan kebutuhan bisnis Anda:
+                                </p>
+                                <ul class="faq-list">
+                                    <li><strong>Kontrak Bulanan (Retainer):</strong> Pemeliharaan berkala, kunjungan on-site terjadwal, serta dukungan remote responsif untuk menjaga kestabilan operasional jaringan.</li>
+                                    <li><strong>Kontrak Tahunan:</strong> Lebih hemat untuk kebutuhan jangka panjang, dilengkapi laporan evaluasi rutin dan prioritas penanganan kendala.</li>
+                                    <li><strong>Project-Based:</strong> Cocok untuk kebutuhan sekali pengerjaan, seperti instalasi jaringan kantor baru, penataan Wi-Fi, audit jaringan, maupun upgrade perangkat.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Location Section (2 Columns: Info & Maps vs Consultation Form) -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">[ 06 / REACH US ]</span>
+                    <h2 class="section-title">Contact &amp; Headquarters</h2>
+                    <p class="section-desc">
+                        Konsultasikan arsitektur dan kendala infrastruktur IT Anda langsung bersama praktisi kami.
+                        Jadwalkan konsultasi atau kirim pesan langsung melalui formulir di bawah ini.
+                    </p>
+                </div>
+
+                <div class="contact-dual-layout">
+                    <!-- Left Column: Info & Google Maps -->
+                    <div class="contact-info-card cyber-hover">
+                        <div class="info-terminal-bar">
+                            <span class="terminal-prompt">&gt;</span>
+                            <span class="info-bar-title">HEADQUARTERS &amp; OPERATIONS</span>
+                            <span class="status-indicator">ACTIVE</span>
+                        </div>
+
+                        <div class="info-content-box">
+                            <div class="info-block">
+                                <div class="info-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="info-details">
+                                    <span class="info-heading">ALAMAT OPERASIONAL:</span>
+                                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Kesadaran,+Pd.+Benda,+Kec.+Pamulang,+Kota+Tangerang+Selatan,+Banten"
+                                        target="_blank" rel="noopener noreferrer" class="address-link"
+                                        title="Buka lokasi di Google Maps">
+                                        <span>Jl. Kesadaran, Pd. Benda, Kec. Pamulang, Kota Tangerang Selatan, Banten,
+                                            Indonesia.</span>
+                                        <span class="address-hint">[Buka Google Maps &rarr;]</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="info-block">
+                                <div class="info-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="info-details">
+                                    <span class="info-heading">WHATSAPP DIRECT:</span>
+                                    <a href="https://wa.me/6285180653460" target="_blank" rel="noopener noreferrer"
+                                        class="contact-comm-link">
+                                        +62 851-8065-3460
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="info-block">
+                                <div class="info-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="info-details">
+                                    <span class="info-heading">JAM OPERASIONAL:</span>
+                                    <span class="info-val">Senin &ndash; Sabtu, 08.00 &ndash; 18.00 WIB (Remote &amp; On-Site by Appointment)</span>
+                                </div>
+                            </div>
+
+                            <!-- Interactive Map Preview Box -->
+                            <div class="map-preview-box">
+                                <div class="map-overlay-badge">
+                                    <span class="dot-green"></span> NETINFRAPRO HQ TANGSEL
+                                </div>
+                                <iframe
+                                    src="https://maps.google.com/maps?q=Jl.+Kesadaran,+Pd.+Benda,+Kec.+Pamulang,+Kota+Tangerang+Selatan,+Banten&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                    class="map-iframe" title="Peta Lokasi NetInfraPro" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Consultation Form (WhatsApp Redirect) -->
+                    <div class="contact-box cyber-hover">
+                        <div class="contact-header">
+                            <div class="contact-terminal-bar">
+                                <span class="terminal-prompt">&gt;_</span>
+                                <span class="contact-title">BOOK A FREE IT CONSULTATION</span>
+                                <span class="status-indicator">READY</span>
+                            </div>
+                            <p class="contact-sub">
+                                Isi kebutuhan infrastruktur bisnis Anda. Pesan akan terformat otomatis dan diteruskan
+                                langsung ke WhatsApp konsultan utama kami.
+                            </p>
+                        </div>
+
+                        <form id="consultation-form" class="consultation-form" novalidate>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="client-name" class="form-label">
+                                        <span class="accent-cyan">&gt;</span> Nama Lengkap:
+                                    </label>
+                                    <input type="text" id="client-name" name="name" class="cyber-input"
+                                        placeholder="Nama lengkap Anda..." required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="client-company" class="form-label">
+                                        <span class="accent-cyan">&gt;</span> Nama Perusahaan / Instansi:
+                                    </label>
+                                    <input type="text" id="client-company" name="company" class="cyber-input"
+                                        placeholder="Nama perusahaan / instansi Anda...">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-service" class="form-label">
+                                    <span class="accent-cyan">&gt;</span> Pilihan Layanan:
+                                </label>
+                                <select id="client-service" name="service" class="cyber-input" required>
+                                    <option value="" disabled selected>Pilih lingkup layanan konsultasi...</option>
+                                    <option value="Enterprise Routing &amp; Security (BGP, VPN, OSPF, Firewall)">
+                                        Enterprise Routing &amp; Security (BGP, VPN, OSPF, Firewall)</option>
+                                    <option value="WLAN Deployment &amp; Managed Wi-Fi (Wi-Fi, Roaming, VLAN)">
+                                        WLAN Deployment &amp; Managed Wi-Fi (Wi-Fi, Roaming, VLAN)</option>
+                                    <option value="IT Helpdesk &amp; Hardware Support (PC &amp; Laptop, LAN, IT Asset)">
+                                        IT Helpdesk &amp; Hardware Support (PC &amp; Laptop, LAN, IT Asset)</option>
+                                    <option value="Audit Infrastruktur Jaringan &amp; Konsultasi Umum">Audit
+                                        Infrastruktur Jaringan &amp; Konsultasi Umum</option>
+                                    <option value="Lainnya / Kebutuhan IT Custom">Lainnya / Kebutuhan IT Custom</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="client-message" class="form-label">
+                                    <span class="accent-cyan">&gt;</span> Pesan / Uraian Masalah IT:
+                                </label>
+                                <textarea id="client-message" name="message" class="cyber-input cyber-textarea" rows="5"
+                                    placeholder="Ceritakan detail kendala, masalah, atau kebutuhan IT Anda di sini..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-primary btn-submit cyber-hover" id="btn-submit">
+                                    <span class="btn-text">Send via WhatsApp</span>
+                                    <span class="btn-arrow">&rarr;</span>
+                                </button>
+                                <span class="form-note">
+                                    <span class="dot-green">&bull;</span> Terhubung langsung ke WhatsApp Konsultan (+62
+                                    851-8065-3460)
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="brand-code">&lt;NIP/&gt;</div>
+                <div class="footer-copy">
+                    &copy; 2026 <strong>NetInfraPro Consulting</strong>. All rights reserved.
+                </div>
+            </div>
+            <div class="footer-right">
+                <span class="footer-status"><span class="dot-green"></span> ALL SYSTEMS OPERATIONAL</span>
+                <span class="footer-sep">|</span>
+                <a href="#home" class="footer-back-to-top">&uarr; Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Logic -->
+    <script src="script.js"></script>
+</body>
+
+</html>
