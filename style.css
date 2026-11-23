@@ -787,7 +787,7 @@ body {
 .service-card {
     background: var(--bg-card);
     border: 1px solid var(--border-tech);
-    padding: 2.1rem 1.65rem;
+    padding: 2.1rem 1.5rem;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -821,11 +821,12 @@ body {
 }
 
 .card-title {
-    font-size: 1.2rem;
+    font-size: clamp(1.08rem, 1.25vw, 1.15rem);
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 0.85rem;
-    line-height: 1.3;
+    line-height: 1.35;
+    min-height: 2.7em;
 }
 
 .card-text {
@@ -1727,6 +1728,7 @@ select.cyber-input option {
         gap: 1.5rem;
     }
 
+    .card-title,
     .project-title {
         min-height: auto;
     }
